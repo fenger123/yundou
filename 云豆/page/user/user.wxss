@@ -1,0 +1,66 @@
+.text1{
+
+   text-align: center;
+}
+.hui{
+  
+    font-size:24px; 
+    color:#3cc51f;
+    font-weight: 700;
+    
+}
+.yun{
+    
+    color: #888;
+    font-size: 14px;
+
+}
+
+.weui_cell
+{
+    background-color: #fff;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    height: 20px;
+
+}
+
+
+.yundou{
+  font-size:8px; 
+  color:aquamarine;
+
+}
+
+.weui_btn.area{
+    margin: 1.17647059em 15px .3em;
+    margin-top: 1.17647em;
+    margin-right: 15px;
+    margin-bottom: 0.3em;
+    margin-left: 15px;
+}
+
+.weui_btn{
+
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    line-height: 2.33333333;
+    border-radius: 5px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    overflow: hidden;
+    background-color: #04be02;
+
+
+}
