@@ -1,0 +1,111 @@
+<view wx:if="{{borrow =='false' && give == 'false' }}"    class="text1" >
+    <text class="hui" >绘本自助借阅</text>
+    <text class="yun" >\n云豆绘本馆</text>
+</view>
+
+<view wx:if="{{borrow =='true' }}"    class="text1">
+    <text class="hui">借书</text>
+    <text class="yun">\n云豆绘本馆</text>
+</view>
+
+<view wx:if="{{give =='true' }}"  class="text1">
+    <text class="hui">还书</text>
+    <text class="yun">\n云豆绘本馆</text>
+</view>
+
+<text class="userinformation" style = "margin-top:10px">用户信息</text>
+
+
+<view class = "weui_cell" wx:if = "{{confirm == 'false'}}"> 
+        <text class = "text_title">{{baby_name}}(已借{{rentCount}}/{{max_book}})</text>
+        <text class="card">\n会员卡号：{{card_number}}</text>
+</view>
+
+<view class = "weui_cell" wx:if = "{{confirm == 'true'}}"> 
+        <text class = "text_title">{{baby_name}}(已借{{rentCount}}/{{max_book}})</text>
+        <text class="card">\n会员卡号：{{card_number}}</text>
+</view>
+
+
+
+ <view wx:if = "{{rentCount != 0 && borrow == 'false' && give == 'false' }}">
+<text class="rent_book" >已借图书</text>
+</view>
+<view class = "weui_cell" wx:if="{{ borrow == 'false' && give == 'false' }}"> 
+    
+    <view wx:for = "{{rent_book}}" wx:for-index = "idx">
+     <view wx:if = "{{rentCount > idx }}">
+       <text class="rent_book1">{{item.rentbook_name}} {{item.rentbook_code}}</text>
+    </view>
+    </view>
+  
+</view>
+
+
+
+
+
+<view  wx:if="{{borrow =='true' }}" style = "margin-top:20px"> 
+        <view class = "weui_cell" style = "height: 30px">
+            <label class = "weui_label">云豆编号</label>
+            <input class = "weui_input" type = "tel" placeholder="请输入云豆编号" bindinput="userNameInput" />
+        </view>   
+
+        <view class = "weui_cell">   
+            <button class="weui_btn2"  style = "margin-top:10px" catchtap="scan">
+                扫描
+            </button> 
+    
+            <button class="weui_btn2" style = "margin-top:10px" catchtap="preBorrow" >
+                添加至预借阅列表
+             </button> 
+
+            <view wx:if="{{pre_borrow =='true' }}"> 
+                <text class="card" >预借阅列表：</text>
+                <text class="card1" >\n{{book_name}}</text>
+                <text class="card2" >\n{{book_number}}</text>
+    
+            </view>
+        </view>
+
+        <button class="weui_btn" catchtap="confirm1" style = "margin-top:15px">
+           确认借阅
+        </button> 
+</view>
+
+
+
+   
+<view  wx:if="{{give =='true' }}" style = "margin-top:20px"> 
+    <label class = "rent_book" style = "padding-left: 15px">还书列表</label>
+    
+    
+     <view  class = "weui_cell"  >
+            <view wx:for = "{{rent_book}}" wx:for-index = "idx">
+            <view wx:if = "{{rentCount > idx }}">
+             <text class="rent_book1" >{{item.rentbook_name}} {{item.rentbook_code}}</text> 
+             <switch class =  "switch"   bindchange = "switch{{idx}}Change" />
+            </view>
+            </view>
+    </view>
+
+    <button class="weui_btn" catchtap = "confirm" style = "padding-right: 0px;">
+           归还图书
+    </button> 
+</view>
+  
+   
+
+
+    <view wx:if="{{borrow =='false'&&  give == 'false' }}"> 
+    
+    <button class="weui_btn" catchtap="borrow" style = "margin-top:15px">
+            借书
+    </button> 
+     <button class="weui_btn1" catchtap="give" style = "margin-top:10px">
+           还书
+    </button> 
+    </view>
+   
+    
+   

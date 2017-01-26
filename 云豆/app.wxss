@@ -1,0 +1,45 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+page{
+  background:  #fbf9fe;
+  box-sizing: border-box;
+  line-height: 1.6;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+view{
+    line-height: 1.6;
+    font: Helvetica Neue,Helvetica,Arial,sans-serif;
+    background:#fbf9fe;
+  
+}
+
+.weui_cell
+{
+    background-color: #fff;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    
+}
+
+.weui_label{
+   
+    width: 4em;
+    float: left;
+  
+
+}
+.weui_input{
+ 
+    background-color: transparent;
+    float: left;
+    
+}

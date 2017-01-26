@@ -1,0 +1,24 @@
+{
+  "debug": true, 
+  "window": {
+    "navigationBarTextStyle": "black", 
+    "navigationBarBackgroundColor": "#fbfcf5", 
+    "navigationBarTitleText": "云豆", 
+    "backgroundColor": "#fbf9fe", 
+    "enablePullDownRefresh": true, 
+    "backgroundTextStyle": "dark"
+  }, 
+  "pages": [
+  
+    "page/user/user", 
+    "page/books/books"
+    
+    
+  ], 
+  "networkTimeout": {
+    "connectSocket": "", 
+    "request": "", 
+    "downloadFile": "", 
+    "uploadFile": ""
+  }
+}
